@@ -7,46 +7,55 @@ class FilmIndex extends React.Component {
   state = {
     films: null,
     currentPage: 1,
-    totalPages: null,
-    onePage: 1
+    totalPages: null
   }
 
   async componentDidMount() {
+    console.log('reload')
     //get all films
-    const response = await getAllFilms(this.state.page)
+    const response = await getAllFilms(this.state.currentPage)
     console.log(response)
     // if console.log works, switch on below function to setState
     //add them to state
     this.setState({
       films: response.data.results,
-      page: response.data.page,
+      currentPage: response.data.page,
       totalPages: response.data.totalPages
     })
   }
 
-  refreshPage = () => {
-    
+  async displayNewResults () {
+    const response = await getAllFilms(this.state.currentPage)
+    this.setState({
+      films: response.data.results,
+      currentPage: response.data.page,
+      totalPages: response.data.totalPages
+    })
   }
 
+
   handleNextPage = () => {
-    const plusOne = this.state.currentPage + this.state.onePage
+    const plusOne = this.state.currentPage + 1
+    console.log(plusOne, 'next page clicked')
     this.setState({
       currentPage: plusOne
     })
+    this.displayNewResults()
   }
 
   handlePreviousPage = () => {
-    const minusOne = this.state.currentPage - this.state.onePage
+    const minusOne = this.state.currentPage - 1
+    console.log(minusOne, 'previous page clicked')
     this.setState({
       currentPage: minusOne
     })
+    this.displayNewResults()
   }
 
 
   //class method getfilms
 
   render() {
-    console.log(this.state.films)
     if ( !this.state.films ) return null
     return (
       <div className="section">
@@ -57,10 +66,10 @@ class FilmIndex extends React.Component {
             )) }
           </div>
         </div>
-        <nav class="pagination" role="navigation" aria-label="pagination">
-          <a onClick={this.handlePreviousPage} class="pagination-previous">Previous</a>
-          <a onClick={this.handleNextPage} class="pagination-next">Next page</a>
-          <ul class="pagination-list">
+        <nav className="pagination" role="navigation" aria-label="pagination">
+          <a onClick={this.handlePreviousPage} className="pagination-previous">Previous</a>
+          <a onClick={this.handleNextPage} className="pagination-next">Next page</a>
+          <ul className="pagination-list">
             {/* <li>
               <a class="pagination-link" aria-label="Goto page 1">1</a>
             </li>
@@ -71,7 +80,7 @@ class FilmIndex extends React.Component {
               <a class="pagination-link" aria-label="Goto page 45">45</a>
             </li> */}
             <li>
-              <a class="pagination-link is-current" aria-label={this.state.page} aria-current="page">{this.state.page}</a>
+              <a className="pagination-link is-current" aria-label={this.state.page} aria-current="page">{this.state.page}</a>
             </li>
             {/* <li>
               <a class="pagination-link" aria-label="Goto page 4">47</a>
