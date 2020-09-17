@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import Navbar from './components/common/Navbar'
-import Searchbar from './components/common/SearchBar'
 import Home from './components/common/Home'
 import Footer from './components/common/Footer'
 

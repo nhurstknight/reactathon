@@ -11,9 +11,12 @@ export const getSingleFilm = filmId => {
   return axios.get(`${baseUrl}/movie/${filmId}?api_key=5adb5c242d8f7268a630ecc811e49a81&language=en-US`)
 }
 
-
-export const searchFunction =  userQuery => {
+export const searchFunction = userQuery => {
   return axios.get(`${baseUrl}search/movie?api_key=5adb5c242d8f7268a630ecc811e49a81&query=${userQuery}`)
+}
+
+export const getRandomFilm = randomFilmId => {
+  return axios.get(`${baseUrl}/movie/${randomFilmId}?api_key=5adb5c242d8f7268a630ecc811e49a81&language=en-US`)
 }
 
 // Search Function (Base url discover+ parameters)
