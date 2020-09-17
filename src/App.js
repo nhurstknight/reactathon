@@ -1,9 +1,29 @@
 import React from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
+import Navbar from './components/common/Navbar'
+import Home from './components/common/Home'
+import Footer from './components/common/Footer'
+
+import FilmIndex from './components/films/FilmIndex'
+import Randomise from './components/films/Randomise'
+
+
+
 
 const App = () => {
   return (
-    <h1>Hello World</h1>
+    <BrowserRouter>
+      {/* <Navbar /> */}
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        {/* <Route path="/filmindex" component={FilmIndex}/>
+        <Route path="/randomise" component={Randomise}/> */}
+      </Switch>
+      <Footer />
+    </BrowserRouter>
   )
 }
 
 export default App
+
