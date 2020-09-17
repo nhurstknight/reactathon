@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer has-background-grey-darker">
       {/* <img src={dblogo} alt="dblogo" /> */}
       <div className="content has-text-centered">
-        <p className="has-text-white">“This product uses the TMDb API but is not endorsed or certified by TMDb.”
+        <p className="has-text-white">This product uses the TMDb API but is not endorsed or certified by TMDb.
         </p>
       </div>
     </footer>

@@ -6,10 +6,8 @@ import Home from './components/common/Home'
 import Footer from './components/common/Footer'
 
 import FilmIndex from './components/films/FilmIndex'
+import FilmShow from './components/films/FilmsShow'
 // import Randomise from './components/films/Randomise'
-
-
-
 
 const App = () => {
   return (
@@ -18,6 +16,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/films" component={FilmIndex}/>
+        <Route path="/films/id" component={FilmShow}/>
         {/* <Route path="/randomise" component={Randomise}/> */}
       </Switch>
       <Footer />

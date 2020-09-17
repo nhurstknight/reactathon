@@ -6,15 +6,15 @@ import FilmCard from './FilmCard'
 class FilmIndex extends React.Component {
   state = {
     films: null,
-    currentPage: 1,
-    totalPages: null
+    totalPages: null,
+    currentPage: 1
   }
 
   async componentDidMount() {
-    console.log('reload')
+    console.log('DID MOUNT')
     //get all films
     const response = await getAllFilms(this.state.currentPage)
-    console.log(response)
+    console.log('getAllFilms', response)
     // if console.log works, switch on below function to setState
     //add them to state
     this.setState({
@@ -67,7 +67,7 @@ class FilmIndex extends React.Component {
           </div>
         </div>
         <nav className="pagination" role="navigation" aria-label="pagination">
-          <a onClick={this.handlePreviousPage} className="pagination-previous">Previous</a>
+          <a onClick={this.handlePreviousPage} className="pagination-previous">Previous page</a>
           <a onClick={this.handleNextPage} className="pagination-next">Next page</a>
           <ul className="pagination-list">
             {/* <li>
@@ -80,7 +80,7 @@ class FilmIndex extends React.Component {
               <a class="pagination-link" aria-label="Goto page 45">45</a>
             </li> */}
             <li>
-              <a className="pagination-link is-current" aria-label={this.state.page} aria-current="page">{this.state.page}</a>
+              <a className="pagination-link is-current" aria-label={this.state.currentPage} aria-current="page">{this.state.currentPage}</a>
             </li>
             {/* <li>
               <a class="pagination-link" aria-label="Goto page 4">47</a>
