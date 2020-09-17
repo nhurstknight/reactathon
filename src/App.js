@@ -6,7 +6,7 @@ import Home from './components/common/Home'
 import Footer from './components/common/Footer'
 
 import FilmIndex from './components/films/FilmIndex'
-import Randomise from './components/films/Randomise'
+// import Randomise from './components/films/Randomise'
 
 
 
@@ -17,8 +17,8 @@ const App = () => {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home}/>
-        {/* <Route path="/filmindex" component={FilmIndex}/>
-        <Route path="/randomise" component={Randomise}/> */}
+        <Route path="/films" component={FilmIndex}/>
+        {/* <Route path="/randomise" component={Randomise}/> */}
       </Switch>
       <Footer />
     </BrowserRouter>
