@@ -2,9 +2,9 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
-const FilmCard = ({ title , release_date, poster_path, id }) => {
+const FilmCard = ({ title, release_date, poster_path, id }) => {
   return (
-    <div className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+    <div id={id} className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
       <Link to={`/films/${id}`}>
         <div className="card">
           <div className="card-header">

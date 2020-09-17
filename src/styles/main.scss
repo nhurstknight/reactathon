@@ -1,7 +1,22 @@
 .image img {
   object-fit: scale-down;
+  margin: 10px;
 }
 
 .pagination {
   padding: 20px;
+}
+
+.card-header {
+  height: 90px;
+  box-shadow: none;
+}
+
+// .Navbar.container{
+//   display: flex;
+//   justify-content: space-between;
+// }
+.Searchbar {
+  display: flex;
+  flex-direction: row;
 }

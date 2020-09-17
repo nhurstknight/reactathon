@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 import { getSingleFilm } from '../../lib/api'
 
-class FilmShow extends React.Component {
+class FilmShow extends Component {
   state = {
-    film: null
+    film: null,
+    genres: null
   }
 
   async componentDidMount() {
+    console.log('mounting')
     // make a request for the single cheese
     const filmId = this.props.match.params.id
     const response = await getSingleFilm(filmId)
@@ -15,7 +17,31 @@ class FilmShow extends React.Component {
     this.setState({
       film: response.data
     })
+    this.fixApiGenres()
   }
+
+  fixApiGenres = () => {
+    const myNewArray = []
+    this.state.film.genres.forEach(genre => {
+      myNewArray.push(genre.name)
+      console.log(myNewArray)
+    })
+    this.setState({
+      genres: myNewArray
+    })
+  }
+  
+  // mapGenres = () => {
+  //   const myNewArray = []
+  //   this.state.film.genres.forEach(genre => {
+  //     myNewArray.push(genre.name)
+  //     console.log(myNewArray)
+  //   })
+  //   this.setState({
+  //     genres: myNewArray
+  //   })
+  // }
+
 
   render() {
     const { film } = this.state
@@ -39,7 +65,7 @@ class FilmShow extends React.Component {
                 Genre(s)
               </h4>
               {/* need to convert genre id to text */}
-              <p>{film.genres.name}</p> 
+              <p>{this.state.genres}</p> 
               <hr />
               <h4 className="title is-4">
                 Description

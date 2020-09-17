@@ -40,7 +40,8 @@ class FilmIndex extends React.Component {
     this.setState({
       currentPage: plusOne
     })
-    this.displayNewResults()
+    // the below makes the setState fail
+    // this.displayNewResults()
   }
 
   handlePreviousPage = () => {
@@ -49,7 +50,8 @@ class FilmIndex extends React.Component {
     this.setState({
       currentPage: minusOne
     })
-    this.displayNewResults()
+    // the below makes the setState fail
+    // this.displayNewResults()
   }
 
 
@@ -67,8 +69,8 @@ class FilmIndex extends React.Component {
           </div>
         </div>
         <nav className="pagination" role="navigation" aria-label="pagination">
-          <a onClick={this.handlePreviousPage} className="pagination-previous">Previous page</a>
-          <a onClick={this.handleNextPage} className="pagination-next">Next page</a>
+          <button onClick={this.handlePreviousPage} className="pagination-previous">Previous page</button>
+          <button onClick={this.handleNextPage} className="pagination-next">Next page</button>
           <ul className="pagination-list">
             {/* <li>
               <a class="pagination-link" aria-label="Goto page 1">1</a>
@@ -80,7 +82,7 @@ class FilmIndex extends React.Component {
               <a class="pagination-link" aria-label="Goto page 45">45</a>
             </li> */}
             <li>
-              <a className="pagination-link is-current" aria-label={this.state.currentPage} aria-current="page">{this.state.currentPage}</a>
+              <button className="pagination-link is-current" aria-label={this.state.currentPage} aria-current="page">{this.state.currentPage}</button>
             </li>
             {/* <li>
               <a class="pagination-link" aria-label="Goto page 4">47</a>

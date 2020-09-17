@@ -2,12 +2,13 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import Navbar from './components/common/Navbar'
+import Searchbar from './components/common/SearchBar'
 import Home from './components/common/Home'
 import Footer from './components/common/Footer'
 
 import FilmIndex from './components/films/FilmIndex'
 import FilmShow from './components/films/FilmsShow'
-// import Randomise from './components/films/Randomise'
+import Randomise from './components/films/Randomise'
 
 const App = () => {
   return (
@@ -15,9 +16,9 @@ const App = () => {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home}/>
+        <Route path="/films/:id" component={FilmShow}/>
         <Route path="/films" component={FilmIndex}/>
-        <Route path="/films/id" component={FilmShow}/>
-        {/* <Route path="/randomise" component={Randomise}/> */}
+        <Route path="/randomise" component={Randomise}/>
       </Switch>
       <Footer />
     </BrowserRouter>
