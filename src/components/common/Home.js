@@ -8,6 +8,7 @@ const Home = () => {
           <h1 className="title is-1 has-text-centered has-text-black">
             <span role="img" aria-label="popcorn emoji"> 🍿 </span>
             A General Assembly of Films
+            <span role="img" aria-label="clapper emoji"> 🎬 </span>
           </h1>
         </div>
       </div>
