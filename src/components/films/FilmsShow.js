@@ -45,7 +45,12 @@ class FilmShow extends Component {
 
   render() {
     const { film } = this.state
-    if ( !film ) return null
+    if ( !film ) {return (
+      <h4 className="title is-4 has-text-centered">
+      INVALID ID
+      </h4>
+    )
+    }
     return (
       <section className="section"> 
         <div className="container"> 

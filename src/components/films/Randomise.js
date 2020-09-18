@@ -10,7 +10,7 @@ class Randomise extends React.Component {
   }
 
   generateRandomNumber = () => {
-    const random = Math.floor(Math.random() * 1100)
+    const random = Math.floor(Math.random() * 1000)
     console.log(random)
     this.setState({
       id: random
@@ -20,7 +20,7 @@ class Randomise extends React.Component {
   async componentDidMount() {
     this.generateRandomNumber()
     const randomFilmId = this.state.id
-    if (this.state.id === Number) {
+    if (typeof this.state.id === 'number') {
       const response = await getRandomFilm(randomFilmId)
       console.log(response)
       this.setState({
@@ -30,12 +30,13 @@ class Randomise extends React.Component {
   }
 
   render() {
-    if (this.state.id === Number) {
+    if (typeof this.state.id === 'number') {
       return (
         <Redirect to={`/films/${this.state.id}`}/>
       ) 
-    }
+    } else return <div>Loading...</div>
   }
 }
+
 
 export default Randomise
