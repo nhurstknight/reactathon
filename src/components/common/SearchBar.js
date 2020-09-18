@@ -12,6 +12,7 @@ class Searchbar extends React.Component {
     this.setState({
       userInput: search
     })
+    console.log(this.state.userInput)
   }
 
   onClickHandler = () => {

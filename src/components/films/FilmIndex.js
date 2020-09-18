@@ -23,7 +23,7 @@ class FilmIndex extends React.Component {
       totalPages: response.data.totalPages
     })
   }
-
+  
   async displayNewResults () {
     const response = await getAllFilms(this.state.currentPage)
     this.setState({
@@ -32,8 +32,8 @@ class FilmIndex extends React.Component {
       totalPages: response.data.totalPages
     })
   }
-
-
+  
+  
   handleNextPage = () => {
     const plusOne = this.state.currentPage + 1
     console.log(plusOne, 'next page clicked')
@@ -41,7 +41,7 @@ class FilmIndex extends React.Component {
       currentPage: plusOne
     })
     // the below makes the setState fail
-    // this.displayNewResults()
+    this.displayNewResults()
   }
 
   handlePreviousPage = () => {
@@ -53,9 +53,6 @@ class FilmIndex extends React.Component {
     // the below makes the setState fail
     // this.displayNewResults()
   }
-
-
-  //class method getfilms
 
   render() {
     if ( !this.state.films ) return null

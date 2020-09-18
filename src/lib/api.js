@@ -1,6 +1,9 @@
 import axios from 'axios'
 
+// import cors-anywhere from 
+
 const baseUrl = 'https://api.themoviedb.org/3'
+const corsUrl = 'https://cors-anywhere.herokuapp.com'
 
 
 export const getAllFilms = currentPage => {
@@ -12,20 +15,10 @@ export const getSingleFilm = filmId => {
 }
 
 export const searchFunction = userQuery => {
-  return axios.get(`${baseUrl}search/movie?api_key=5adb5c242d8f7268a630ecc811e49a81&query=${userQuery}`)
+  return axios.get(`${corsUrl}/${baseUrl}search/movie?api_key=5adb5c242d8f7268a630ecc811e49a81&query=${userQuery}`)
 }
 
 export const getRandomFilm = randomFilmId => {
   return axios.get(`${baseUrl}/movie/${randomFilmId}?api_key=5adb5c242d8f7268a630ecc811e49a81&language=en-US`)
 }
 
-// Search Function (Base url discover+ parameters)
-// Find out how many pages in object
-// setState: Pages
-// make buttons based on number of pages
-// each button has value (1,2,3,4,5,6,7)
-// If user clicks on button, re-render filmindex changing the getAllFilm function utilising the page number value
-
-// export const searchFilms = ( page ) => {
-//   return axios.get(`${baseUrlDiscover}/search/movie?api_key=5adb5c242d8f7268a630ecc811e49a81&query=${event.target.handle}`)
-// }
