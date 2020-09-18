@@ -1,12 +1,14 @@
 import React from 'react'
+// import axios from 'axios'
 
-import { searchFunction } from '../../lib/api'
+
 
 class Searchbar extends React.Component {
   state = {
     userInput: '',
     films: null
   }
+
 
   searchQuery = event => {
     const search = event.target.value
@@ -16,42 +18,32 @@ class Searchbar extends React.Component {
     console.log(this.state.userInput)
   }
 
-  onClickHandler () {
-    console.log(this.state.userInput)
-    // const response = searchFunction(this.state.userInput)
-    // console.log(response)
-    // console.log(this.state.films)
-    // this.setState({ response })
-    // this.setState({
-    //   films: response
-    // })
-  }
+
 
 
   render() {
+    console.log(this.props)
     const { userInput } = this.props
-    // if ( !this.state.films ) return null
     return (
-      <div className="Searchbar-wrapper">
-        <div className="Seachbar control">
-        
-          <input 
-            className="Searchbar input is-primary" 
-            type="text" 
-            placeholder="Search..." 
-            // <i class="fa fa-search" aria-hidden="true"></i>
-            value={userInput}
-            onChange={this.searchQuery} />
-          <button onClick={this.onClickHandler}
-            className="button is-success is-light is-focused">
-            Search
-          </button>
-          {/* <div className="buttons">
-            
-          </div> */}
+      <div className="SearchForm">
+        <div className="container">
+          <div className="field has-addons">
+            <div className="control is-expanded">
+              <input
+                className="input is-medium"
+                type="search"
+                placeholder="Filter by name or country"
+                value={userInput}
+                onChange={this.searchQuery}
+              />
+            </div>
+            <button onClick={() => this.props.onClickHandler(this.state.userInput)}
+              className="button is-success is-light is-focused">
+              Search
+            </button>
+          </div>
         </div>
       </div>
-      
     )
   }
 }

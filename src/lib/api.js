@@ -1,10 +1,8 @@
 import axios from 'axios'
 
-// import cors-anywhere from 
-
 const baseUrl = 'https://api.themoviedb.org/3'
-const corsUrl = 'https://cors-anywhere.herokuapp.com'
 const token = '5adb5c242d8f7268a630ecc811e49a81'
+// const corsUrl = 'https://cors-anywhere.herokuapp.com'
 // const baseUrl2 = 'https://api.themoviedb.org/3'
 
 

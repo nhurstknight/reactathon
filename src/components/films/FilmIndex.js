@@ -4,6 +4,9 @@ import { getAllFilms } from '../../lib/api'
 import FilmCard from './FilmCard'
 import Searchbar from '../common/SearchBar'
 
+import { searchFunction } from '../../lib/api'
+
+
 class FilmIndex extends React.Component {
   state = {
     films: null,
@@ -12,12 +15,9 @@ class FilmIndex extends React.Component {
   }
 
   async componentDidMount() {
-    console.log('DID MOUNT')
-    //get all films
+
     const response = await getAllFilms(this.state.currentPage)
     console.log('getAllFilms', response)
-    // if console.log works, switch on below function to setState
-    //add them to state
     this.setState({
       films: response.data.results,
       currentPage: response.data.page
@@ -51,15 +51,28 @@ class FilmIndex extends React.Component {
   }
 
 
+  //sort improrts
+  onClickHandler = async(userInput) => {
+    console.log(this.state.userInput)
+    const response = await searchFunction(userInput)
+    console.log(response)
+    console.log(this.state.films)
+    this.setState({
+      films: response.data.results
+    })
+  } 
+
+
   render() {
     const { films } = this.state
+    console.log(films)
     if ( !this.state.films ) return null
     return (
       <div className="section">
-        <Searchbar {...films}/>
+        <Searchbar onClickHandler={this.onClickHandler}/>
         <div className="container">
           <div className="columns is-multiline">
-            { this.state.films.map(film => (
+            {films && films.map(film => (
               <FilmCard key={film.id} {...film} />
             )) }
           </div>
@@ -68,31 +81,12 @@ class FilmIndex extends React.Component {
           <button onClick={this.handlePreviousPage} className="pagination-previous">Previous page</button>
           <button onClick={this.handleNextPage} className="pagination-next">Next page</button>
           <ul className="pagination-list">
-            {/* <li>
-              <a class="pagination-link" aria-label="Goto page 1">1</a>
-            </li>
-            <li>
-              <span class="pagination-ellipsis">&hellip;</span>
-            </li>
-            <li>
-              <a class="pagination-link" aria-label="Goto page 45">45</a>
-            </li> */}
             <li>
               <button className="pagination-link is-current" aria-label={this.state.currentPage} aria-current="page">{this.state.currentPage}</button>
             </li>
-            {/* <li>
-              <a class="pagination-link" aria-label="Goto page 4">47</a>
-            </li>
-            <li>
-              <span class="pagination-ellipsis">&hellip;</span>
-            </li>
-            <li>
-              <a class="pagination-link" aria-label="Goto page 86">86</a>
-            </li>*/}
           </ul> 
         </nav>
       </div>
-      
     )
   }
 }
