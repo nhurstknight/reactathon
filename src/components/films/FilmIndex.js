@@ -36,7 +36,6 @@ class FilmIndex extends React.Component {
   
   handleNextPage = () => {
     const plusOne = this.state.currentPage + 1
-    console.log(plusOne, 'next page clicked')
     this.setState({ 
       currentPage: plusOne
     }, () => this.displayNewResults())
@@ -44,7 +43,6 @@ class FilmIndex extends React.Component {
 
   handlePreviousPage = () => {
     const minusOne = this.state.currentPage - 1
-    console.log(minusOne, 'previous page clicked')
     this.setState({ 
       currentPage: minusOne
     }, () => this.displayNewResults())
@@ -53,10 +51,7 @@ class FilmIndex extends React.Component {
 
   //sort improrts
   onClickHandler = async(userInput) => {
-    console.log(this.state.userInput)
     const response = await searchFunction(userInput)
-    console.log(response)
-    console.log(this.state.films)
     this.setState({
       films: response.data.results
     })
@@ -77,14 +72,21 @@ class FilmIndex extends React.Component {
             )) }
           </div>
         </div>
-        <nav className="pagination" role="navigation" aria-label="pagination">
+        <nav className="pagination is-centered" role="navigation" aria-label="pagination">
+          {/* <a class="pagination-previous">Previous</a>
+          <a class="pagination-next">Next page</a> */}
           <button onClick={this.handlePreviousPage} className="pagination-previous">Previous page</button>
           <button onClick={this.handleNextPage} className="pagination-next">Next page</button>
           <ul className="pagination-list">
-            <li>
-              <button className="pagination-link is-current" aria-label={this.state.currentPage} aria-current="page">{this.state.currentPage}</button>
-            </li>
-          </ul> 
+            {/* <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+            <li><span class="pagination-ellipsis">&hellip;</span></li>
+            <li><a class="pagination-link" aria-label="Goto page 45">45</a></li> */}
+            {/* <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li> */}
+            <li className="pagination-link is-current" aria-label={this.state.currentPage} aria-current="page">{this.state.currentPage}</li>
+            {/* <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+            <li><span class="pagination-ellipsis">&hellip;</span></li>
+            <li><a class="pagination-link" aria-label="Goto page 86">86</a></li> */}
+          </ul>
         </nav>
       </div>
     )

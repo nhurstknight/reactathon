@@ -11,7 +11,6 @@ class Randomise extends React.Component {
 
   generateRandomNumber = () => {
     const random = Math.floor(Math.random() * 1000)
-    console.log(random)
     this.setState({
       id: random
     })
@@ -22,7 +21,6 @@ class Randomise extends React.Component {
     const randomFilmId = this.state.id
     if (typeof this.state.id === 'number') {
       const response = await getRandomFilm(randomFilmId)
-      console.log(response)
       this.setState({
         id: response.data
       })

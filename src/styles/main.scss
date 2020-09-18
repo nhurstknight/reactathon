@@ -1,15 +1,36 @@
-.Filmcard.image.img {
+@import '~bulma/bulma.sass';
+
+	.Hero.hero-body {
+		background-image: url('../images/HomeBackground.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+  }
+
+img {
   object-fit: scale-down;
   margin: 20px auto;
 }
 
-.FilmShow.container.image img {
-  height: 10vh;
+.showcardimage {
+  object-fit: scale-down;
+  margin-left: 100px;
+}
+
+
+.SearchForm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.SearchForm.control{
+  width: 75%;
 }
 
 .info.column{
   padding-top: 20px;
-  margin-left: 50px;
+  margin: 25px, 50px;
 }
 
 .pagination {
@@ -23,12 +44,11 @@
 }
 
 
-.Searchbar {
-  display: flex;
-  flex-direction: column;
+.navbar-item, .navbar-link {
+  padding: 0.5rem 2rem;
 }
 
-// .Navbar.container{
-//   display: flex;
-//   justify-content: space-between;
-// }
+.search.button {
+  margin-left: 50px;
+  margin-top: 5px;
+}

@@ -9,10 +9,8 @@ class FilmShow extends Component {
   }
 
   async componentDidMount() {
-    console.log('mounting')
     const filmId = this.props.match.params.id
     const response = await getSingleFilm(filmId)
-    console.log(response)
     this.setState({
       film: response.data
     })
@@ -44,7 +42,7 @@ class FilmShow extends Component {
         <div className="FilmShow container"> 
           <div className="columns"> 
             <div className="column is-half">
-              <figure className="image">
+              <figure className="showcardimage">
                 <img src={`https://image.tmdb.org/t/p/w500/${film.poster_path}`} alt={`${film.title} poster`}/>
               </figure>
             </div>
