@@ -7,7 +7,7 @@ import Searchbar from '../common/SearchBar'
 class FilmIndex extends React.Component {
   state = {
     films: null,
-    totalPages: null,
+    // totalPages: null,
     currentPage: 1
   }
 
@@ -20,12 +20,11 @@ class FilmIndex extends React.Component {
     //add them to state
     this.setState({
       films: response.data.results,
-      currentPage: response.data.page,
-      totalPages: response.data.totalPages
+      currentPage: response.data.page
+      // totalPages: response.data.totalPages
     })
   }
 
-  //change search bar to filmindex, pass through props
   
   async displayNewResults () {
     const response = await getAllFilms(this.state.currentPage)
@@ -53,10 +52,11 @@ class FilmIndex extends React.Component {
 
 
   render() {
+    const { films } = this.state
     if ( !this.state.films ) return null
     return (
       <div className="section">
-        <Searchbar />
+        <Searchbar {...films}/>
         <div className="container">
           <div className="columns is-multiline">
             { this.state.films.map(film => (

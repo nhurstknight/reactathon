@@ -16,12 +16,8 @@ export const getSingleFilm = filmId => {
   return axios.get(`${baseUrl}/movie/${filmId}?api_key=${token}&language=en-US`)
 }
 
-// export const searchFunction = userQuery => {
-//   return axios.get(`${corsUrl}${baseUrl}search/movie?api_key=${token}&query=${userQuery}`)
-// }
-
-export const searchFunction = userQuery => {
-  return axios.get(`${baseUrl}/search/movie?api_key=${token}&query=${userQuery}`)
+export const searchFunction = userInput => {
+  return axios.get(`${baseUrl}/search/movie?api_key=${token}&query=${userInput}`)
 }
 
 

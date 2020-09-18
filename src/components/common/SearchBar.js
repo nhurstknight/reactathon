@@ -4,7 +4,8 @@ import { searchFunction } from '../../lib/api'
 
 class Searchbar extends React.Component {
   state = {
-    userInput: ''
+    userInput: '',
+    films: null
   }
 
   searchQuery = event => {
@@ -15,14 +16,21 @@ class Searchbar extends React.Component {
     console.log(this.state.userInput)
   }
 
-  onClickHandler = () => {
-    searchFunction(this.state.userInput)
-    this.setState({
-      films: response.data.results,
+  onClickHandler () {
+    console.log(this.state.userInput)
+    // const response = searchFunction(this.state.userInput)
+    // console.log(response)
+    // console.log(this.state.films)
+    // this.setState({ response })
+    // this.setState({
+    //   films: response
+    // })
+  }
 
 
   render() {
     const { userInput } = this.props
+    // if ( !this.state.films ) return null
     return (
       <div className="Searchbar-wrapper">
         <div className="Seachbar control">
