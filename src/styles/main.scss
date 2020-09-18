@@ -1,6 +1,15 @@
-.image img {
+.Filmcard.image.img {
   object-fit: scale-down;
-  margin: 10px;
+  margin: 20px auto;
+}
+
+.FilmShow.container.image img {
+  height: 10vh;
+}
+
+.info.column{
+  padding-top: 20px;
+  margin-left: 50px;
 }
 
 .pagination {
@@ -10,16 +19,16 @@
 .card-header {
   height: 90px;
   box-shadow: none;
+  margin: 10px 0 0 0;
+}
+
+
+.Searchbar {
+  display: flex;
+  flex-direction: column;
 }
 
 // .Navbar.container{
 //   display: flex;
 //   justify-content: space-between;
 // }
-.Searchbar {
-  display: flex;
-  flex-direction: column;
-}
-
-.Searchbar-wrapper {
-}

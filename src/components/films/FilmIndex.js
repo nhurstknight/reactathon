@@ -2,6 +2,7 @@ import React from 'react'
 
 import { getAllFilms } from '../../lib/api'
 import FilmCard from './FilmCard'
+import Searchbar from '../common/SearchBar'
 
 class FilmIndex extends React.Component {
   state = {
@@ -23,13 +24,13 @@ class FilmIndex extends React.Component {
       totalPages: response.data.totalPages
     })
   }
+
+  //change search bar to filmindex, pass through props
   
   async displayNewResults () {
     const response = await getAllFilms(this.state.currentPage)
     this.setState({
-      films: response.data.results,
-      currentPage: response.data.page,
-      totalPages: response.data.totalPages
+      films: response.data.results
     })
   }
   
@@ -37,27 +38,25 @@ class FilmIndex extends React.Component {
   handleNextPage = () => {
     const plusOne = this.state.currentPage + 1
     console.log(plusOne, 'next page clicked')
-    this.setState({
+    this.setState({ 
       currentPage: plusOne
-    })
-    // the below makes the setState fail
-    this.displayNewResults()
+    }, () => this.displayNewResults())
   }
 
   handlePreviousPage = () => {
     const minusOne = this.state.currentPage - 1
     console.log(minusOne, 'previous page clicked')
-    this.setState({
+    this.setState({ 
       currentPage: minusOne
-    })
-    // the below makes the setState fail
-    // this.displayNewResults()
+    }, () => this.displayNewResults())
   }
+
 
   render() {
     if ( !this.state.films ) return null
     return (
       <div className="section">
+        <Searchbar />
         <div className="container">
           <div className="columns is-multiline">
             { this.state.films.map(film => (

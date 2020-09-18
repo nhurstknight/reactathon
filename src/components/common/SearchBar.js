@@ -17,7 +17,9 @@ class Searchbar extends React.Component {
 
   onClickHandler = () => {
     searchFunction(this.state.userInput)
-  }
+    this.setState({
+      films: response.data.results,
+
 
   render() {
     const { userInput } = this.props

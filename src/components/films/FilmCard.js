@@ -6,7 +6,7 @@ const FilmCard = ({ title, release_date, poster_path, id }) => {
   return (
     <div id={id} className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
       <Link to={`/films/${id}`}>
-        <div className="card">
+        <div className="Filmcard card">
           <div className="card-image">
             <figure className="image image is-1by1">
               <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={`${title} poster`}/>
