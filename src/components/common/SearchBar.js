@@ -21,24 +21,26 @@ class Searchbar extends React.Component {
   render() {
     const { userInput } = this.props
     return (
-      <div className="Seachbar control">
+      <div className="Searchbar-wrapper">
+        <div className="Seachbar control">
         
-        <input 
-          className="Searchbar input is-primary" 
-          type="text" 
-          placeholder="Search..." 
-          // <i class="fa fa-search" aria-hidden="true"></i>
-          value={userInput}
-          onChange={this.searchQuery} />
-        <button onClick={this.onClickHandler}
-          className="button is-success is-light is-focused">
-          Search
-        </button>
-        {/* <div className="buttons">
-          
-        </div> */}
-
+          <input 
+            className="Searchbar input is-primary" 
+            type="text" 
+            placeholder="Search..." 
+            // <i class="fa fa-search" aria-hidden="true"></i>
+            value={userInput}
+            onChange={this.searchQuery} />
+          <button onClick={this.onClickHandler}
+            className="button is-success is-light is-focused">
+            Search
+          </button>
+          {/* <div className="buttons">
+            
+          </div> */}
+        </div>
       </div>
+      
     )
   }
 }

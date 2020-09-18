@@ -1,7 +1,7 @@
 import React from 'react'
 
 // import FilmShow from './common/FilmsShow'
-import getRandomFilm from '../../lib/api'
+// import getRandomFilm from '../../lib/api'
 import { Link } from 'react-router-dom'
 
 class Randomise extends React.Component {
@@ -20,39 +20,40 @@ class Randomise extends React.Component {
     // this.setState({ playerChoice: choice, compChoice, result })
   }
 
-  async componentDidMount() {
-    this.generateRandomNumber()
-    console.log('mounting')
-    // make a request for the single cheese
-    const randomFilmId = this.state.id
-    const response = await getRandomFilm(randomFilmId)
-    console.log(response)
-    this.setState({
-      id: response.data
-    })
-    // this.fixApiGenres()
-  }
+  // async componentDidMount() {
+  //   this.generateRandomNumber()
+  //   console.log('mounting')
+  //   // make a request for the single cheese
+  //   const randomFilmId = this.state.id
+  //   const response = await getRandomFilm(randomFilmId)
+  //   console.log(response)
+  //   this.setState({
+  //     id: response.data
+  //   })
+  //   // this.fixApiGenres()
+  // }
 
   render() {
     
     return (
-      <Link to={`/films/${this.state.id}`}> </Link>
+      <div>It works</div>
+      // <Link to={`/films/${this.state.id}`}> </Link>
     ) 
   }
 }
 
 export default Randomise
 
-      // <div class="container">
-      //   <Link to={`/films/${id}`}>
-      //   <div class="notification">
-      //     This container is <strong>centered</strong> on desktop.
-      //     <button class="button is-large is-fullwidth">Large</button>
-      //   </div>
-      //   </Link>
-      // </div>
+// <div class="container">
+//   <Link to={`/films/${id}`}>
+//   <div class="notification">
+//     This container is <strong>centered</strong> on desktop.
+//     <button class="button is-large is-fullwidth">Large</button>
+//   </div>
+//   </Link>
+// </div>
 
-    // <FilmShow />
-    // button
-    // random film link
-    // generate a FilmShow page
+// <FilmShow />
+// button
+// random film link
+// generate a FilmShow page
