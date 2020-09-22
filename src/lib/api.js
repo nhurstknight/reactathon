@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const baseUrl = 'https://api.themoviedb.org/3'
-const token = '5adb5c242d8f7268a630ecc811e49a81'
+const token = process.env.REACT_APP_MY_API_KEY
 // const corsUrl = 'https://cors-anywhere.herokuapp.com'
 // const baseUrl2 = 'https://api.themoviedb.org/3'
 

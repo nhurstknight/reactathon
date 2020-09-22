@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const FilmCard = ({ title, release_date, poster_path, id }) => {
   return (
-    <div id={id} className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+    <div id={id} className="column is-one-quarter-desktop is-one-third-tablet">
       <Link to={`/films/${id}`}>
         <div className="Filmcard card">
           <div className="card-image">
@@ -13,7 +13,7 @@ const FilmCard = ({ title, release_date, poster_path, id }) => {
             </figure>
           </div>
           <div className="card-header">
-            <h4 className="card-header-title">{title}</h4>
+            <h4 className="card-header-title is-centered">{title}</h4>
           </div>
         </div>
       </Link> 

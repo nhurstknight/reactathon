@@ -57,7 +57,7 @@ class FilmIndex extends React.Component {
   render() {
     const { films } = this.state
     console.log(films)
-    if ( !this.state.films ) return null
+    if ( !this.state.films ) return <h1 className="loading-film-index">Loading...</h1>
     return (
       <div className="section">
         <Searchbar onClickHandler={this.onClickHandler}/>

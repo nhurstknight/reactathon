@@ -38,7 +38,7 @@ class Searchbar extends React.Component {
               />
             </div>
             <button onClick={() => this.props.onClickHandler(this.state.userInput)}
-              className="search button is-danger is-light is-focused ">
+              className="search button is-grey-dark is-focused ">
               Search
             </button>
           </div>

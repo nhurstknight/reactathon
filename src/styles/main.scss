@@ -34,7 +34,10 @@ img {
 }
 
 .pagination {
-  padding: 20px;
+  width: 30%;
+  margin: auto;
+  padding: 40px;
+
 }
 
 .card-header {
@@ -42,7 +45,6 @@ img {
   box-shadow: none;
   margin: 10px 0 0 0;
 }
-
 
 .navbar-item, .navbar-link {
   padding: 0.5rem 2rem;
@@ -52,3 +54,18 @@ img {
   margin-left: 50px;
   margin-top: 5px;
 }
+
+.loading-film-index {
+  font-size: 72px;
+  text-align: center;
+  height: 80vh;
+}
+
+// .FilmShow.container {
+//   height: 80vh;
+// }
+
+// .FilmShow.image {
+//   height: 50%;
+//   width: auto;
+// }

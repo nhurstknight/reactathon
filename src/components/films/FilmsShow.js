@@ -14,6 +14,7 @@ class FilmShow extends Component {
     this.setState({
       film: response.data
     })
+    console.log(this.state.film)
     this.fixApiGenres()
   }
 
@@ -34,7 +35,13 @@ class FilmShow extends Component {
     const { film } = this.state
     if ( !film ) {
       return (
-        <h4 className="title is-4 has-text-centered">INVALID ID</h4>
+        <h1 className="loading-film-index">Loading...</h1>
+        // <section>
+        //   {/* <h4 className="title is-4 has-text-centered">INVALID ID</h4> */}
+        //   <h4 className="title is-4 has-text-centered">Error 404</h4>
+        //   <h2 className="title is-4 has-text-centered">Film not found, please try again</h2>
+        // </section>
+        
       )
     }
     return (
@@ -42,7 +49,7 @@ class FilmShow extends Component {
         <div className="FilmShow container"> 
           <div className="columns"> 
             <div className="column is-half">
-              <figure className="showcardimage">
+              <figure className="Filmshow image">
                 <img src={`https://image.tmdb.org/t/p/w500/${film.poster_path}`} alt={`${film.title} poster`}/>
               </figure>
             </div>
