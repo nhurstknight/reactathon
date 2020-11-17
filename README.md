@@ -1,5 +1,5 @@
 
-# SEI-project-2 - A General Assembly of Movies
+# SEI-project-2 - A General Assembly of Films
 The deployed app can be found [here](https://condescending-kowalevski-76c740.netlify.app/)
 
 ## Brief
@@ -30,15 +30,15 @@ This project was pair coded with [Lewis Jones](https://github.com/LewisJones0). 
 
 ## Overview 
 We selected our chosen API [The Movie DB (TMDB)]([API Overview — The Movie Database (TMDb)](https://www.themoviedb.org/documentation/api)) The ket features were:
-- View top rated movies.
-- Search for movies.
+- View top rated films.
+- Search for films.
 - Randomise a film selection if you are stuck for what to watch.
 
 ## Process
 As we have a limited time to build the application we decided to spend time planning and investigate which API to build our application with. We opted to build our app using [TMDb (The Movie Db) API]([API Overview — The Movie Database (TMDb)](https://www.themoviedb.org/documentation/api)) due to the extensive documentation that was available and the amount of data that was accessible from the API. 
 
 ### Planning
-We outlined the MVP for our product which was to build the FilmIndex, FilmCard and FilmShow components.
+We outlined the MVP (minimum viable product) for our product which was to build the FilmIndex, FilmCard and FilmShow components.
 
 INSERT WIREFRAMES
 
@@ -60,7 +60,7 @@ Once of the challenges that we encountered whilst building the app was due to th
 [image:57BC2861-0AB5-428E-BF83-9D2983054DAB-56756-0000D56E7FC577AA/Screenshot 2020-11-17 at 02.18.33.png]
 
 ## Bugs
-As this uses a third party API, we discovered that some of the randomFilmId generated in the randomise component function may not be associated with a valid film. Due to time constraints we were not able to implement an error page for the user.
+As this uses a third party API, we discovered that some of the randomFilmIds that were generated in the randomise function may not be associated with a valid film. Due to time constraints we were not able to implement an error page for the user so this is something I would like to add at a later stage.
  
 ## Future features
 We were not able to implement a filter by genre so I would like to add this in the future.
