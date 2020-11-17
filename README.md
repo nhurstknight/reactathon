@@ -47,7 +47,7 @@ Once we received the API key we delved into building the application and decided
 I really enjoyed building this application due to the flexibility and speed you can achieve when using React and a styling framework such as Bulma. Due to this we were able to build our MVP very quickly and move onto implementing additional features such as pagination and search functionality.
 
 ### Challenges
-Once of the challenges that we encountered whilst building the app was due to the limitations of how many objects it could return for each GET request. The below code snippets show how we were able to overcome this by implementing on the FilmIndex component.
+One of the challenges that we encountered whilst building the app was due to the limitations of how many objects it could return for each GET request. The below code snippets show how we were able to overcome this by implementing on the FilmIndex component.
 
 ```js
 handleNextPage = () => {
