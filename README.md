@@ -15,18 +15,10 @@ The technical requirements were as follows:
 This project was pair coded with [Lewis Jones](https://github.com/LewisJones0). We had 1.5 days to complete the build the application.
 
 ## Technologies & Tools
-- React 
-- HTML5
-- Sass
-- Bulma
-- React-router-dom
-- Axios
-- VSCode
-- Eslint
-- Git
-- Github
-- Yarn
-- Netlify
+
+**Tech:** HTML5, CSS3, JavaScript, React, Sass, Bulma, Axios, React-router-dom
+
+**Tools:** VSCode,Eslint, Git & GitHub, Yarn, Netflify
 
 ## Overview 
 We selected our chosen API [The Movie DB (TMDB)]([API Overview — The Movie Database (TMDb)](https://www.themoviedb.org/documentation/api)) The ket features were:
@@ -42,7 +34,7 @@ We outlined the MVP (minimum viable product) for our product which was to build 
 
 INSERT WIREFRAMES
 
-We also planned the extra features that we wanted to implement if we achieved MVP which included:
+We also planned the extra features to implement if we achieved MVP which included:
 - Search functionality
 - Randomising a film
 - Filtering by genre
@@ -52,7 +44,7 @@ Once we received the API key we delved into building the application and decided
 
 ## Wins & Challenges
 ### Wins
-I really enjoyed building this application due to the flexibility and speed you can achieve when building applications using React and a styling framework such as Bulma. Due to this we were able to build our MVP very quickly and move onto implementing additional features such as pagination and search functionality.
+I really enjoyed building this application due to the flexibility and speed you can achieve when using React and a styling framework such as Bulma. Due to this we were able to build our MVP very quickly and move onto implementing additional features such as pagination and search functionality.
 
 ### Challenges
 Once of the challenges that we encountered whilst building the app was due to the limitations of how many objects it could return for each GET request. Due to this we had to implement pagination. Which was challenging
