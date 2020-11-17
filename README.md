@@ -47,9 +47,32 @@ Once we received the API key we delved into building the application and decided
 I really enjoyed building this application due to the flexibility and speed you can achieve when using React and a styling framework such as Bulma. Due to this we were able to build our MVP very quickly and move onto implementing additional features such as pagination and search functionality.
 
 ### Challenges
-Once of the challenges that we encountered whilst building the app was due to the limitations of how many objects it could return for each GET request. Due to this we had to implement pagination. Which was challenging
+Once of the challenges that we encountered whilst building the app was due to the limitations of how many objects it could return for each GET request. The below code snippets show how we were able to overcome this by implementing on the FilmIndex component.
 
-[image:57BC2861-0AB5-428E-BF83-9D2983054DAB-56756-0000D56E7FC577AA/Screenshot 2020-11-17 at 02.18.33.png]
+```js
+handleNextPage = () => {
+    const plusOne = this.state.currentPage + 1
+    this.setState({ 
+      currentPage: plusOne
+    }, () => this.displayNewResults())
+  }
+
+  handlePreviousPage = () => {
+    const minusOne = this.state.currentPage - 1
+    this.setState({ 
+      currentPage: minusOne
+    }, () => this.displayNewResults())
+  }
+```
+```xml
+<nav className="pagination is-centered" role="navigation" aria-label="pagination">
+  <button onClick={this.handlePreviousPage} className="pagination-previous">Previous page</button>
+  <button onClick={this.handleNextPage} className="pagination-next">Next page</button>
+  <ul className="pagination-list">
+    <li className="pagination-link is-current" aria-label={this.state.currentPage} aria-current="page">{this.state.currentPage}</li>
+  </ul>
+</nav>
+```
 
 ## Bugs
 As this uses a third party API, we discovered that some of the randomFilmIds that were generated in the randomise function may not be associated with a valid film. Due to time constraints we were not able to implement an error page for the user so this is something I would like to add at a later stage.
