@@ -1,6 +1,6 @@
 
 # SEI-project-2 - A General Assembly of Movies
-The deployed app can be found [here] [🍿 A General Assembly of Films 🎬](https://condescending-kowalevski-76c740.netlify.app/)
+The deployed app can be found [here](https://condescending-kowalevski-76c740.netlify.app/)
 
 ## Brief
 The brief for this project was to build a **React application** that consumes a **public API**.
