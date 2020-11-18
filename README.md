@@ -12,7 +12,7 @@ The technical requirements were as follows:
 - Must be deployed online.
 
 ## Contributors & Timeline
-This project was pair coded with [Lewis Jones](https://github.com/LewisJones0). We had 1.5 days to complete the build the application.
+This project was pair coded with [Lewis Jones](https://github.com/LewisJones0). We had 2 days to complete the build the application.
 
 ## Technologies & Tools
 
