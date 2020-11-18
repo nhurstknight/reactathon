@@ -1,6 +1,6 @@
 
 # SEI-project-2 - A General Assembly of Films
-The deployed app can be found [here](https://condescending-kowalevski-76c740.netlify.app/)
+The deployed app can be found [here](https://condescending-kowalevski-76c740.netlify.app/).
 
 ## Brief
 The brief for this project was to build a **React application** that consumes a **public API**.
@@ -21,7 +21,7 @@ This project was pair coded with [Lewis Jones](https://github.com/LewisJones0). 
 **Tools:** VSCode,Eslint, Git & GitHub, Yarn, Netflify
 
 ## Overview 
-We selected our chosen API [The Movie DB (TMDB)]([API Overview — The Movie Database (TMDb)](https://www.themoviedb.org/documentation/api)) The ket features were:
+We selected our chosen API [The Movie DB (TMDB)]([API Overview — The Movie Database (TMDb)](https://www.themoviedb.org/documentation/api)) The key features were:
 - View top rated films.
 - Search for films.
 - Randomise a film selection if you are stuck for what to watch.
@@ -35,9 +35,9 @@ We outlined the MVP (minimum viable product) for our product which was to build 
 INSERT WIREFRAMES
 
 We also planned the extra features to implement if we achieved MVP which included:
-- Search functionality
-- Randomising a film
-- Filtering by genre
+- Search functionality.
+- Randomising a film.
+- Filtering by genre.
 
 ### Build
 Once we received the API key we delved into building the application and decided to pair code throughout the build. This allowed me to really build on my ability to talk through coding challenges with my course mate and I found that I really enjoyed this aspect of the process.
