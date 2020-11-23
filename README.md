@@ -27,7 +27,7 @@ We selected our chosen API [The Movie DB (TMDB)]([API Overview — The Movie Dat
 - Randomise a film selection if you are stuck for what to watch.
 
 ## Process
-As we have a limited time to build the application we decided to spend time planning and investigate which API to build our application with. We opted to build our app using [TMDb (The Movie Db) API]([API Overview — The Movie Database (TMDb)](https://www.themoviedb.org/documentation/api)) due to the extensive documentation that was available and the amount of data that was accessible from the API. 
+As we have a limited time to build the application, we decided to spend time planning and investigate which API to build our application with. We opted to build our app using [TMDb (The Movie Db) API]([API Overview — The Movie Database (TMDb)](https://www.themoviedb.org/documentation/api)) due to the extensive documentation that was available and the amount of data that was accessible from the API. 
 
 ### Planning
 We outlined the MVP (minimum viable product) for our product which was to build the FilmIndex, FilmCard and FilmShow components.
@@ -40,11 +40,11 @@ We also planned the extra features to implement if we achieved MVP which include
 - Filtering by genre.
 
 ### Build
-Once we received the API key we delved into building the application and decided to pair code throughout the build. This allowed me to really build on my ability to talk through coding challenges with my course mate and I found that I really enjoyed this aspect of the process.
+Once we received the API key, we delved into building the application and decided to pair code throughout the build. This allowed me to really build on my ability to talk through coding challenges with my course mate and I found that I really enjoyed this aspect of the process.
 
 ## Wins & Challenges
 ### Wins
-I really enjoyed building this application due to the flexibility and speed you can achieve when using React and a styling framework such as Bulma. Due to this we were able to build our MVP very quickly and move onto implementing additional features such as pagination and search functionality.
+I really enjoyed building this application due to the flexibility and speed you can achieve when using React and a styling framework such as Bulma. Due to this, we were able to build our MVP very quickly and move onto implementing additional features such as pagination and search functionality.
 
 ### Challenges
 One of the challenges that we encountered whilst building the app was due to the limitations of how many objects it could return for each GET request. The below code snippets show how we were able to overcome this by implementing on the FilmIndex component.
@@ -79,3 +79,10 @@ As this uses a third party API, we discovered that some of the randomFilmIds tha
  
 ## Future features
 We were not able to implement a filter by genre so I would like to add this in the future.
+
+## Key Learnings
+- Building an application using a component-based framework such as React.
+- How to structure files in a RESTful React project.
+- Using JSX to write HTML markup directly in JavaScript source code.
+- Understanding the unidirectional flow of data in React and how to use `state` and `props`.
+- Intergrating a third party API into a front-end application.
