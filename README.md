@@ -1,5 +1,8 @@
 
 # SEI-project-2 - A General Assembly of Films
+
+![A General Assembly of Films](/movie-api.png)
+
 The deployed app can be found [here](https://condescending-kowalevski-76c740.netlify.app/).
 
 ## Brief
